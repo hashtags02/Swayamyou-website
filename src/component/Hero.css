@@ -1,0 +1,176 @@
+@keyframes glowDropShadow {
+  0%, 100% {
+    filter: drop-shadow(0 0 8px rgba(136, 133, 134, 0.5));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px rgba(185, 183, 184, 0.9));
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.hero-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  padding: 60px;
+  box-sizing: border-box;
+}
+
+/* LEFT CONTENT */
+.heroleftcontent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+  max-width: 700px;
+  animation: fadeInLeft 1.2s ease-out both;
+  will-change: transform, opacity;
+}
+
+.heroleftcontent h1 {
+  font-size: 75px;
+  font-weight: bold;
+  line-height: 1.0;
+  margin: -50px 0 45px 30px;
+  color: white;
+  text-align: left;
+}
+
+.heroleftcontent h1 span {
+  color: #ff0080;
+}
+
+.heroleftcontent p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #ccc;
+  margin-left: 40px;
+  text-align: left;
+}
+
+.Learnbutton {
+  background-color: white;
+  color: black;
+  padding: 0.75rem 1.5rem;
+  font-weight: bold;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  width: fit-content;
+  margin-left: 40px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.Learnbutton:hover {
+  background-color: #ff0080;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* RIGHT CONTENT */
+.herorightcontent {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 100%;
+  animation: fadeInRight 1.2s ease-out both;
+  will-change: transform, opacity;
+}
+
+.herorightcontent img {
+  height: 100%;
+  object-fit: cover;
+  margin-right: -60px;
+  animation: glowDropShadow 3s ease-in-out infinite;
+  border-radius: 10px;
+  transition: filter 0.3s ease-in-out;
+}
+
+.herorightcontent img:hover {
+  animation-play-state: paused;
+  filter: drop-shadow(0 0 30px rgba(255, 0, 128, 1));
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .heroleftcontent {
+    align-items: center;
+    animation: fadeInLeft 1s ease-in-out both;
+  }
+
+  .heroleftcontent h1 {
+    font-size: 2.5rem;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .heroleftcontent p {
+    font-size: 1rem;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .Learnbutton {
+    margin-left: 0;
+  }
+
+  .herorightcontent {
+    justify-content: center;
+    animation: fadeInRight 1s ease-in-out both;
+  }
+
+  .herorightcontent img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+}

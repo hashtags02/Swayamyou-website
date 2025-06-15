@@ -1,0 +1,176 @@
+/* Base animation states */
+.features-container,
+.features-content,
+.feature-card {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Animate in when class added */
+.features-container.animate-in,
+.features-content.animate-in,
+.feature-card.animate-in {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+/* Fade In Up animation keyframes */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Stagger animation delays for cards */
+.feature-card {
+  transition-delay: 0.2s;
+}
+.feature-card:nth-child(1).animate-in { transition-delay: 0.2s; }
+.feature-card:nth-child(2).animate-in { transition-delay: 0.4s; }
+.feature-card:nth-child(3).animate-in { transition-delay: 0.6s; }
+
+/* Container and layout */
+features-container {
+  max-width: 1200px;
+  min-height: 400px;
+  margin: auto;
+  padding: 1rem 0rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.features-content {
+  text-align: center;
+  width: 100%;
+}
+
+.features-content h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: white;
+  text-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+}
+
+.features-content p {
+  font-size: 1rem;
+  color: #ddd;
+  margin-bottom: 3rem;
+}
+
+/* Feature cards layout */
+.feature-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+/* Individual card styling */
+.feature-card {
+  background: linear-gradient(135deg, rgba(2, 4, 22, 0.85), rgba(0, 60, 80, 0.6));
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(0, 255, 255, 0.1);
+  border-radius: 1rem;
+  padding: 2rem 1rem 1rem 1rem;
+  width: 280px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: auto;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 10px 20px rgba(0, 255, 255, 0.2);
+}
+
+/* ✅ Updated Image Styling */
+.feature-img {
+  width: 100%;
+  height: auto;
+  max-height: 300px; /* Increased from 220px */
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 1.5rem auto; /* Added more bottom spacing */
+  border-radius: 10px;
+}
+
+/* Title styling */
+.feature-title {
+  font-size: 1.5rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 700;
+  color: #00ffff;
+  margin-bottom: 0.8rem;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.4);
+}
+
+/* Paragraph styling */
+.feature-card p {
+  font-size: 1rem;
+  color: #bbbbbb;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+  .features-container {
+    padding: 2rem 1rem;
+  }
+
+  .features-content h1 {
+    font-size: 1.6rem;
+  }
+
+  .features-content p {
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+  }
+
+  .feature-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .feature-card {
+    width: 90%;
+    padding: 1.5rem 1rem;
+  }
+
+  /* ✅ Increased mobile image size */
+  .feature-img {
+    max-height: 220px; /* Increased from 160px */
+  }
+
+  .feature-title {
+    font-size: 1.4rem;
+  }
+
+  .feature-card p {
+    font-size: 0.95rem;
+  }
+
+  .feature-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 255, 255, 0.2);
+  }
+}
+
+/* Prevent horizontal scroll */
+body {
+  overflow-x: hidden;
+}

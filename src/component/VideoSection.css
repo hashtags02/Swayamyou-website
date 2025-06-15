@@ -1,0 +1,127 @@
+/* ========== FAQ BACKGROUND SECTION ========== */
+.Faq-background {
+  background-color: #000; /* fallback color */
+  background-size: auto;
+  background-repeat: repeat;
+  background-position: center;
+  padding: 5rem 2rem;
+}
+
+/* ========== MAIN VIDEO SECTION ========== */
+.video-section {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+  min-height: 450px; /* ✅ Prevents layout jump */
+}
+
+/* Heading Styles */
+.video-heading {
+  font-size: 2.2rem;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+  opacity: 0;
+  animation: fadeSlideUp 1s ease-in-out forwards;
+  animation-delay: 0.2s;
+}
+
+.video-heading span {
+  color: #00bcd4;
+  font-weight: 700;
+}
+
+/* Video Container */
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 1050px;
+  margin: 2rem auto;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.15);
+  opacity: 0;
+  animation: fadeSlideIn 1.2s ease-in-out forwards;
+  animation-delay: 0.5s;
+}
+
+/* Actual Video */
+.identity-video {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  display: block;
+  border-radius: 18px;
+}
+
+/* Demo Button */
+.demo-button {
+  background-color: white;
+  color: black;
+  padding: 0.6rem 1.6rem;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
+  margin-top: 1rem;
+  opacity: 0;
+  animation: fadeSlideUp 1s ease-in-out forwards;
+  animation-delay: 0.8s;
+}
+
+.demo-button:hover {
+  background-color: #f4f4f4;
+  transform: scale(1.05);
+}
+
+/* ========== Custom Animations ========== */
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ========== Responsive Design ========== */
+@media (max-width: 768px) {
+  .video-heading {
+    font-size: 1.6rem;
+  }
+
+  .demo-button {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-heading {
+    font-size: 1.4rem;
+  }
+
+  .demo-button {
+    padding: 0.45rem 1rem;
+    font-size: 0.85rem;
+  }
+}

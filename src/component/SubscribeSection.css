@@ -1,0 +1,166 @@
+/* Layout */
+.subscribe-section-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.subscribe-section {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1270px;
+  padding: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.subscribe-content {
+  flex: 1;
+  padding: 1rem;
+  text-align: left;
+}
+
+.subscribe-content h2 {
+  font-size: 1.8rem;
+  color: #000;
+  margin-bottom: 0.5rem;
+}
+
+.subscribe-content span {
+  color: #040c62;
+}
+
+.subscribe-content p {
+  color: #555;
+  font-size: 1rem;
+  margin-top: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Form */
+.subscribe-form {
+  margin: 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: flex-start;
+}
+
+.subscribe-form input {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  min-width: 300px;
+  flex: 1;
+}
+
+.subscribe-form button {
+  padding: 0.5rem 1.2rem;
+  background-color: #0077ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* Connect With Us Section */
+.connect-section {
+  margin-top: 1.5rem;
+}
+
+.connect-section h3 {
+  font-size: 20px;
+  margin-bottom: 0.8rem;
+  color: #050f7c;
+}
+
+.contact-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: 0.5rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.icon {
+  font-size: 1.2rem;
+  color: #050f7c;
+}
+
+/* Image */
+.subscribe-image {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.image-and-contact img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 992px) {
+  .subscribe-section {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .subscribe-form {
+    justify-content: center;
+  }
+
+  .subscribe-content {
+    text-align: center;
+  }
+
+  .connect-section,
+  .contact-row {
+    align-items: center;
+  }
+
+  .subscribe-image {
+    justify-content: center;
+  }
+
+  .image-and-contact img {
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .subscribe-form input {
+    min-width: 100%;
+  }
+
+  .subscribe-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .subscribe-content p {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: initial;
+  }
+}

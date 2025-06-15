@@ -1,0 +1,90 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  color: white;
+  flex-wrap: wrap;
+}
+
+/* Left Navbar */
+.navbar-left ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  margin-left: 50px;
+  padding: 0;
+}
+
+.navbar-left ul li {
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* Center Navbar */
+.navbar-center {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+/* Right Navbar */
+.navbar-right button {
+  padding: 0.5rem 1rem;
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 200px;
+}
+
+/* Align sections */
+.navbar > div {
+  flex: 1;
+  text-align: center;
+}
+
+.navbar-left {
+  text-align: left;
+}
+
+.navbar-right {
+  text-align: right;
+}
+
+/* ---------- MEDIA QUERY FOR MOBILE ---------- */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .navbar-left ul {
+    flex-direction: column;
+    gap: 1rem;
+    margin-left: 0;
+  }
+
+  .navbar-center {
+    text-align: center;
+    font-size: 1.2rem;
+    width: 100%;
+  }
+
+  .navbar-right {
+    text-align: left;
+    margin-top: 1rem;
+  }
+
+  .navbar-right button {
+    margin-left: 0;
+  }
+
+  .navbar > div {
+    flex: none;
+    width: 100%;
+  }
+}
