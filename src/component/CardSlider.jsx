@@ -40,6 +40,7 @@ const CardSlider = () => {
 
   return (
     <motion.div
+      id="features" // <-- Added ID here for scroll target
       ref={sectionRef}
       className="Grid-background"
       style={{
