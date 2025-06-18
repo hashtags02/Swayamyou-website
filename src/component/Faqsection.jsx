@@ -96,7 +96,7 @@ const FAQSection = () => {
         backgroundImage: "url('/background.png')",
         backgroundSize: 'auto',
         backgroundRepeat: 'repeat',
-        backgroundPosition: 'middle center',
+          backgroundPosition: 'bottom center',
       }}
     >
       <div className="faq-header" onClick={() => setShowContent(!showContent)}>
@@ -131,6 +131,6 @@ const FAQSection = () => {
       )}
     </div>
   );
-};
+};          
 
 export default FAQSection;

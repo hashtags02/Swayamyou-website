@@ -45,7 +45,7 @@ const SubscribeSection = () => {
                 </div>
                 <div className="contact-item">
                   <FaPhoneAlt className="icon" />
-                  <p>265559559595</p>
+                  <p>7878284545</p>
                 </div>
                 <div className="contact-item">
                   <IoLocationSharp className="icon" />

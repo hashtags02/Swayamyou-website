@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 .faq-section {
   color: white;
   width: 100%;
@@ -32,6 +33,7 @@
 .dropdown-icon {
   font-size: 1.5rem;
   transition: transform 0.3s ease;
+  color: rgb(233, 4, 184);
 }
 
 .dropdown-icon.rotate {
@@ -41,6 +43,7 @@
 /* Title */
 .faq-title {
   font-size: 2.5rem;
+  font-family: poppins, sans-serif;
   font-weight: bold;
   margin: 0;
   animation: fadeInUp 0.6s ease forwards;
@@ -126,6 +129,7 @@
   max-height: 500px;
   opacity: 1;
   padding: 0.5rem 0;
+  font-family: poppins, sans-serif;
 }
 
 /* Image */
@@ -160,6 +164,7 @@
 .faq-input h3 {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
+  font-family: poppins, sans-serif;
 }
 
 .faq-input p {

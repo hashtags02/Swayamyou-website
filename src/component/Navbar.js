@@ -21,7 +21,7 @@ function Navbar() {
       </div>
       <div className="navbar-center">SWAYAMYOU</div>
       <div className="navbar-right">
-        <button className="Sign">Sign Up</button>
+        <button className="Sign">Book Demo</button>
       </div>
     </nav>
   );
